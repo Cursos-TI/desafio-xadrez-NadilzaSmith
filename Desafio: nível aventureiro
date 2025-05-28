@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main() {
+    // Movimento do Bispo
+    const int bispo = 5;
+    int count_bispo = 0;
+
+    printf("Movimento do Bispo:\n");
+    while (count_bispo < bispo) {
+        if (count_bispo % 2 == 0) {
+            printf("Cima Esquerda\n");
+        } else {
+            printf("Cima Direita\n");
+        }
+        count_bispo++;
+    }
+
+    // Movimento da Torre
+    const int torre = 5;
+
+    printf("\nMovimento da Torre:\n");
+    for (int x = 0; x < torre; x++) {
+        printf("Direita\n");
+    }
+
+    // Movimento da Rainha
+    const int rainha = 8;
+    int count_rainha = 0;
+
+    printf("\nMovimento da Rainha:\n");
+    do {
+        printf("Esquerda\n");
+        count_rainha++;
+    } while (count_rainha < rainha);
+
+    // Movimento do Cavalo
+    const int mov_esquerda = 1;
+    const int mov_abaixo = 2;
+    const int count_cavalo = 3;
+
+    for (int x = 0; x < count_cavalo; x++) {
+        // Loop para descer 2 casas
+        int passos_baixo = 0;
+        while (passos_baixo < mov_abaixo) {
+            printf("Baixo\n");
+            passos_baixo++;
+        }
+
+        // Loop para ir 1 casa para a esquerda
+        for (int y = 0; y < mov_esquerda; y++) {
+            printf("Esquerda\n");
+        }
+    }
+
+    return 0;
+}
